@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CULTFORM — AI-Driven 3D Production & Micro-Factories Hub</title>
+  <meta name="description" content="Digital contract manufacturing and 3D printing from CAD to series in 4 days with zero tooling costs. Micro-factories in Turkey and Russia.">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="container navbar-inner">
+      <a href="#" class="logo">
+        <img src="assets/images/logoTransparent.webp" alt="CULTFORM Logo" class="logo-img">
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#problem" class="nav-link" data-i18n="nav_problem">Проблема</a></li>
+        <li><a href="#solution" class="nav-link" data-i18n="nav_solution">Решение</a></li>
+        <li><a href="#process" class="nav-link" data-i18n="nav_process">Процесс</a></li>
+        <li><a href="#hubs" class="nav-link" data-i18n="nav_hubs">Хабы</a></li>
+        <li><a href="#products" class="nav-link" data-i18n="nav_products">Продукция</a></li>
+        <li><a href="#materials" class="nav-link" data-i18n="nav_materials">Материалы</a></li>
+        <li><a href="#roadmap" class="nav-link" data-i18n="nav_roadmap">Стратегия</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <!-- Language Switcher RU | TR -->
+        <div class="lang-switcher">
+          <button class="lang-btn active" data-lang="ru">RU</button>
+          <button class="lang-btn" data-lang="tr">TR</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <div class="section-tag" data-i18n="hero_badge">AI-Driven 3D Production | Micro-Factories Hub</div>
+          <h1 data-i18n="hero_title">Цифровое производство и 3D-печать.</h1>
+          <p data-i18n="hero_subtitle">Умная фабрика нового поколения: от AI-идеи до серийного производства для вашего бренда за 4 дня.</p>
+
+          <div class="hero-buttons">
+            <a href="#products" class="btn btn-secondary" data-i18n="hero_cta_secondary">Каталог продукции</a>
+          </div>
+
+          <div class="hero-stats">
+            <div class="stat-item">
+              <span class="stat-value" data-i18n="stat1_val">96 ч</span>
+              <span class="stat-label" data-i18n="stat1_lbl">Скорость от идеи до готовой серии</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-value" data-i18n="stat2_val">$0</span>
+              <span class="stat-label" data-i18n="stat2_lbl">Затраты на пресс-формы и оснастку</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-value" data-i18n="stat3_val">10–1k</span>
+              <span class="stat-label" data-i18n="stat3_lbl">Оптимальный размер партии (шт)</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-value" data-i18n="stat4_val">-40%</span>
+              <span class="stat-label" data-i18n="stat4_lbl">Сокращение R&D-бюджета</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Problem vs Solution Section (Bento Grid 35/65) -->
+  <section class="problem-section" id="problem">
+    <div class="container">
+      <div class="section-tag" data-i18n="problem_tag">Сравнение технологий</div>
+      <h2 class="section-title" data-i18n="problem_title">Generative AI + 3D-печать: новая эра быстрых мощностей</h2>
+
+      <!-- Asymmetric Bento Grid 35/65 -->
+      <div class="bento-comparison-grid">
+        
+        <!-- Left: 35% Problem / Legacy Card -->
+        <div class="bento-card legacy-card">
+          <div class="card-header-bar">
+            <span class="status-pill status-danger">
+              <span class="pulse-dot red">●</span> LEGACY MOLDING
+            </span>
+          </div>
+          <h3 class="bento-card-title legacy-title" data-i18n="prob_card_title">Традиционное производство</h3>
+          
+          <div class="legacy-problem-stack">
+            <!-- Item 1 -->
+            <div class="legacy-item">
+              <div class="legacy-top">
+                <span class="legacy-badge">$15K+ / 3 мес.</span>
+                <h4 data-i18n="prob1_title">Дорогой старт</h4>
+              </div>
+              <p data-i18n="prob1_desc">от $15 000 за пресс-формы и 3 месяца ожидания.</p>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="legacy-item">
+              <div class="legacy-top">
+                <span class="legacy-badge">5 000+ шт.</span>
+                <h4 data-i18n="prob2_title">Замороженный капитал</h4>
+              </div>
+              <p data-i18n="prob2_desc">минимальный заказ от 5 000 шт. на склад.</p>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="legacy-item">
+              <div class="legacy-top">
+                <span class="legacy-badge">100% Risk</span>
+                <h4 data-i18n="prob3_title">Цена ошибки</h4>
+              </div>
+              <p data-i18n="prob3_desc">любой дефект в чертеже — списанный бюджет и старт с нуля.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: 65% Solution / AI Smart Factory Card (White Card with Bright Orange Border) -->
+        <div class="bento-card solution-card solution-white-card" id="solution">
+          <div class="solution-header-bar">
+            <div class="section-tag solution-badge" data-i18n="sol_tag">Преимущество CULTFORM</div>
+          </div>
+
+          <div class="solution-headline-wrap">
+            <h3 class="bento-card-title solution-main-title" data-i18n="sol_title">Умная фабрика CULTFORM</h3>
+          </div>
+
+          <!-- 3 Key Tier Metrics Bento Inner Grid -->
+          <div class="bento-metrics-subgrid">
+            
+            <!-- Metric 1: $0 -->
+            <div class="metric-bento-box">
+              <div class="metric-val-wrap">
+                <span class="metric-number outfit-font">$0</span>
+                <span class="metric-tag-pill">Zero CapEx</span>
+              </div>
+              <h4 class="metric-title" data-i18n="sol1_title">$0 на оборудование</h4>
+              <p class="metric-desc" data-i18n="sol1_desc">оплата только готовых изделий без вложений в формы.</p>
+            </div>
+
+            <!-- Metric 2: 96h -->
+            <div class="metric-bento-box highlight-box">
+              <div class="metric-val-wrap">
+                <span class="metric-number outfit-font accent-terracotta">96h</span>
+                <span class="metric-tag-pill gold-tag">Fast Delivery</span>
+              </div>
+              <h4 class="metric-title" data-i18n="sol2_title">Отгрузка за 4 дня</h4>
+              <p class="metric-desc" data-i18n="sol2_desc">от AI-модели до готовой партии — 96 часов.</p>
+            </div>
+
+            <!-- Metric 3: 1h -->
+            <div class="metric-bento-box">
+              <div class="metric-val-wrap">
+                <span class="metric-number outfit-font">1h</span>
+                <span class="metric-tag-pill">Agile Iteration</span>
+              </div>
+              <h4 class="metric-title" data-i18n="sol3_title">Правки за 1 час</h4>
+              <p class="metric-desc" data-i18n="sol3_desc">мгновенные изменения конструкции без финансовых рисков.</p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Workflow Banner -->
+      <div class="workflow-banner bento-workflow">
+        <div class="flow-step">
+          <span class="step-num outfit-font">01</span>
+          <span data-i18n="flow_s1">Ваша 3D-модель / Задача</span>
+        </div>
+        <div class="flow-arrow">➔</div>
+        <div class="flow-step highlight">
+          <span class="step-num outfit-font">02</span>
+          <span data-i18n="flow_s2">AI-Инжиниринг CULTFORM</span>
+        </div>
+        <div class="flow-arrow">➔</div>
+        <div class="flow-step">
+          <span class="step-num outfit-font">03</span>
+          <span data-i18n="flow_s3">Готовая партия у вас через 4 дня</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process Section (Gantri Style Steps 01..04) -->
+  <section class="process-section" id="process">
+    <div class="container">
+      <div class="section-tag" data-i18n="proc_tag">Производственный цикл</div>
+      <h2 class="section-title" data-i18n="proc_title">Прозрачный процесс от цифры к объекту</h2>
+      <p class="section-subtitle" data-i18n="proc_sub">Четыре этапа высокоточного производства с полным контролем качества по стандарту ISO.</p>
+
+      <div class="process-grid">
+        <div class="process-card">
+          <div class="process-img">
+            <img src="assets/images/3d_engineering_part.webp" alt="AI-Дизайн и Концепт" loading="lazy">
+          </div>
+          <div class="process-num">01</div>
+          <h3 data-i18n="proc1_title">AI-Дизайн и Концепт</h3>
+          <p data-i18n="proc1_desc">Превращаем текстовое описание, эскиз или задачу в идеальную 3D-модель за несколько минут с помощью алгоритмов Generative AI.</p>
+        </div>
+        <div class="process-card">
+          <div class="process-img">
+            <img src="assets/images/eurasia_model.webp" alt="Умная Логистика" loading="lazy">
+          </div>
+          <div class="process-num">02</div>
+          <h3 data-i18n="proc2_title">Умная Логистика</h3>
+          <p data-i18n="proc2_desc">Цифровой файл мгновенно отправляется на ближайший к вам хаб (Турция или РФ) для максимального сокращения сроков и стоимости доставки.</p>
+        </div>
+        <div class="process-card">
+          <div class="process-img">
+            <img src="assets/images/3d_printing_nozzle.webp" alt="Автоматизированная Печать" loading="lazy">
+          </div>
+          <div class="process-num">03</div>
+          <h3 data-i18n="proc3_title">Автоматизированная Печать</h3>
+          <p data-i18n="proc3_desc">Запускаем партию на парке скоростных печатных комплексов. Выполняем заказы от 10 до 1 000 штук за 24–48 часов.</p>
+        </div>
+        <div class="process-card">
+          <div class="process-img">
+            <img src="assets/images/drone_propellers.webp" alt="Контроль и Доставка" loading="lazy">
+          </div>
+          <div class="process-num">04</div>
+          <h3 data-i18n="proc4_title">Контроль и Доставка</h3>
+          <p data-i18n="proc4_desc">Проверяем геометрию и прочность каждого изделия, бережно упаковываем и доставляем курьером прямо к вашей двери за 96 часов.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Logistics & Micro-Factories Section -->
+  <section class="logistics-section" id="hubs">
+    <div class="container">
+      <div class="section-tag" data-i18n="log_tag">География & Логистика</div>
+      <h2 class="section-title" data-i18n="log_title">Стратегия Micro-Factories: производство у клиента</h2>
+      <p class="section-subtitle" data-i18n="log_sub">Вместо перевозки готового пластика через границы мы масштабируем физические печатные мощности под локальный спрос.</p>
+
+      <div class="hubs-grid">
+        <div class="hub-cards">
+          <div class="hub-card">
+            <div class="hub-header">
+              <h3 data-i18n="hub_ru_title">Цех в России (Ростов-на-Дону)</h3>
+              <span class="hub-badge" data-i18n="hub_ru_badge">Внутренний рынок</span>
+            </div>
+            <p data-i18n="hub_ru_desc">Работает на российский сбыт, обеспечивая быструю локальную печать и оперативные поставки.</p>
+          </div>
+
+          <div class="hub-card">
+            <div class="hub-header">
+              <h3 data-i18n="hub_tr_title">Цех в Турции (Анталья)</h3>
+              <span class="hub-badge" data-i18n="hub_tr_badge">Локальный рынок</span>
+            </div>
+            <p data-i18n="hub_tr_desc">Ориентирован на местное турецкое производство и оперативное обслуживание локального рынка.</p>
+          </div>
+
+          <div class="hub-card" style="border-color: var(--accent-terracotta);">
+            <div class="hub-header">
+              <h3 data-i18n="hub_mf_title">Глобальное масштабирование</h3>
+              <span class="hub-badge" style="background: rgba(39, 174, 96, 0.2); color: #27ae60;" data-i18n="hub_mf_badge">Глобальное масштабирование</span>
+            </div>
+            <p data-i18n="hub_mf_desc">Будущие цеха в разных странах Европы, Азии и Америки будут запускаться непосредственно на местах для работы на локальные рынки.</p>
+          </div>
+        </div>
+
+        <div class="hub-visual">
+          <img src="assets/images/Robotic_arms_printing_golden_obj…_202608061834.webp" alt="CULTFORM Micro-Factory Facility" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Product Matrix Section (Light, Airy & Minimalist Creative Layout) -->
+  <section class="products-section light-products-section" id="products">
+    <div class="container">
+      <div class="products-minimal-header">
+        <div class="section-tag" data-i18n="prod_tag">Продуктовая матрица</div>
+        <h2 class="section-title" data-i18n="prod_title">Что мы производим для вашего бизнеса</h2>
+        <p class="section-subtitle" data-i18n="prod_sub">От корпусов электроники до сложной промышленной оснастки для сборки.</p>
+      </div>
+
+      <div class="products-light-grid">
+        
+        <!-- Item 1: Contract Manufacturing -->
+        <div class="product-minimal-item item-1">
+          <div class="product-minimal-thumb mask-1">
+            <img src="assets/images/Three_electronics_enclosures_on_…_202608061434.webp" alt="Contract Manufacturing IoT housings" loading="lazy">
+            <span class="product-minimal-num">01</span>
+          </div>
+          <div class="product-minimal-content">
+            <div class="product-minimal-cat" data-i18n="p1_cat">CONTRACT MANUFACTURING</div>
+            <h3 class="product-minimal-title" data-i18n="p1_title">Корпуса IoT-датчиков и приборов</h3>
+            <p class="product-minimal-desc" data-i18n="p1_desc">Защитные кожухи, компактные корпуса электроники и корпусные элементы медицинского оборудования.</p>
+            
+            <div class="product-minimal-meta">
+              <div class="minimal-meta-row">
+                <span class="meta-label" data-i18n="p1_what">Что делаем</span>
+                <span class="meta-value" data-i18n="p1_what_val">Корпуса IoT-датчиков, приборов, медицинских устройств</span>
+              </div>
+              <div class="minimal-meta-row">
+                <span class="meta-label" data-i18n="p1_who">Кому нужно</span>
+                <span class="meta-value" data-i18n="p1_who_val">Разработчики электроники, Медтех-стартапы</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 2: White-Label / CTM -->
+        <div class="product-minimal-item item-2">
+          <div class="product-minimal-thumb mask-2">
+            <img src="assets/images/Design_object_gallery_desk_organ…_202608061428.webp" alt="White-Label Products" loading="lazy">
+            <span class="product-minimal-num">02</span>
+          </div>
+          <div class="product-minimal-content">
+            <div class="product-minimal-cat" data-i18n="p2_cat">WHITE-LABEL / CTM</div>
+            <h3 class="product-minimal-title" data-i18n="p2_title">Предметный дизайн и интерьерный декор</h3>
+            <p class="product-minimal-desc" data-i18n="p2_desc">Дизайнерские светильники, вазы, архитектурные органайзеры, мебельная фурнитура и премиальный мерч.</p>
+            
+            <div class="product-minimal-meta">
+              <div class="minimal-meta-row">
+                <span class="meta-label" data-i18n="p1_what">Что делаем</span>
+                <span class="meta-value" data-i18n="p2_what_val">Вазы, интерьерный свет, настольные аксессуары, CTM-коллекции</span>
+              </div>
+              <div class="minimal-meta-row">
+                <span class="meta-label" data-i18n="p1_who">Кому нужно</span>
+                <span class="meta-value" data-i18n="p2_who_val">D2C-бренды, дизайнеры интерьера, ритейл-сети, шоурумы</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 3: Digital Warehouse Spare Parts -->
+        <div class="product-minimal-item item-3">
+          <div class="product-minimal-thumb mask-3">
+            <img src="assets/images/Mechanical_components_on_slate_s…_202608061434.webp" alt="Digital Warehouse Spare Parts" loading="lazy">
+            <span class="product-minimal-num">03</span>
+          </div>
+          <div class="product-minimal-content">
+            <div class="product-minimal-cat" data-i18n="p3_cat">DIGITAL WAREHOUSE</div>
+            <h3 class="product-minimal-title" data-i18n="p3_title">Запасные части и компоненты (Spare Parts)</h3>
+            <p class="product-minimal-desc" data-i18n="p3_desc">Шестерни, форсунки, кронштейны, переходники и износостойкие детали для ликвидации простоя линий.</p>
+            
+            <div class="product-minimal-meta">
+              <div class="minimal-meta-row">
+                <span class="meta-label" data-i18n="p1_what">Что делаем</span>
+                <span class="meta-value" data-i18n="p3_what_val">Шестерни, форсунки, кронштейны, детали оборудования</span>
+              </div>
+              <div class="minimal-meta-row">
+                <span class="meta-label" data-i18n="p1_who">Кому нужно</span>
+                <span class="meta-value" data-i18n="p3_who_val">Промышленные фабрики и заводы</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 4: Tooling & Jigs -->
+        <div class="product-minimal-item item-4">
+          <div class="product-minimal-thumb mask-4">
+            <img src="assets/images/Assembly_jig_with_automotive_part_202608061434.webp" alt="Tooling and Jigs" loading="lazy">
+            <span class="product-minimal-num">04</span>
+          </div>
+          <div class="product-minimal-content">
+            <div class="product-minimal-cat" data-i18n="p4_cat">TOOLING & JIGS</div>
+            <h3 class="product-minimal-title" data-i18n="p4_title">Промышленная оснастка и кондукторы</h3>
+            <p class="product-minimal-desc" data-i18n="p4_desc">Кондукторы для сверления, шаблоны сборки, ложементы и контрольные калибры.</p>
+            
+            <div class="product-minimal-meta">
+              <div class="minimal-meta-row">
+                <span class="meta-label" data-i18n="p1_what">Что делаем</span>
+                <span class="meta-value" data-i18n="p4_what_val">Кондукторы для сверления, ложементы, шаблоны</span>
+              </div>
+              <div class="minimal-meta-row">
+                <span class="meta-label" data-i18n="p1_who">Кому нужно</span>
+                <span class="meta-value" data-i18n="p4_who_val">Автопром, Сборочные цеха</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Materials & Applications Section (Creative Asymmetric & Airy Layout) -->
+  <section class="materials-section" id="materials">
+    <div class="materials-bg-watermark-logo">
+      <img src="assets/images/logoTransparent.webp" alt="" aria-hidden="true">
+    </div>
+    <div class="container">
+      <div class="materials-header-asym">
+        <div class="materials-header-left">
+          <div class="section-tag" data-i18n="mat_tag">Инженерные полимеры</div>
+          <h2 class="section-title" data-i18n="mat_title">Материалы под задачи вашего бизнеса</h2>
+        </div>
+        <div class="materials-header-right">
+          <p class="materials-lead-sub" data-i18n="mat_sub">Подбираем пластик строго под условия эксплуатации: агрессивная среда, высокие нагрузки, уличные условия.</p>
+          <div class="materials-spec-badge">
+            <span class="badge-pulse"></span>
+            <span class="badge-text">100+ COMPOUND SPECS</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="materials-asym-grid">
+        <!-- Card 1: Impact & Outdoor (Top-Left, Asymmetric Tilt) -->
+        <div class="material-asym-card card-impact">
+          <div class="card-num">01</div>
+          <div class="material-floating-tag">UV & IMPACT PROOF</div>
+          <div class="material-img-container">
+            <img src="assets/images/Outdoor_light_fixture_water_drops_202608061516.webp" alt="Ударопрочные и уличные пластики" loading="lazy">
+          </div>
+          <div class="material-body">
+            <div class="material-header">
+              <span class="material-code" data-i18n="m1_code">PETG / ABS / ASA</span>
+              <h3 data-i18n="m1_title">Ударопрочные и уличные пластики</h3>
+            </div>
+            <p data-i18n="m1_desc">Не боятся воды, падений, бытовой химии и не выгорают под прямым ультрафиолетом.</p>
+            <div class="material-uses">
+              <p data-i18n="m1_uses">Применение: Декор, корпуса приборов, авто-аксессуары.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2: Carbon Fiber Composite (Right Side, Staggered Down - Dark Carbon Hero) -->
+        <div class="material-asym-card card-carbon">
+          <div class="card-num dark-num">02</div>
+          <div class="material-floating-tag carbon-tag">ALUMINUM ALTERNATIVE</div>
+          <div class="material-img-container">
+            <img src="assets/images/Drone_arm_component_with_bolt_202608061511.webp" alt="Композиты с углеволокном (Карбон)" loading="lazy">
+          </div>
+          <div class="material-body">
+            <div class="material-header">
+              <span class="material-code carbon-code" data-i18n="m2_code">PETG-CF / PA-CF</span>
+              <h3 data-i18n="m2_title">Композиты с углеволокном (Карбон)</h3>
+            </div>
+            <p data-i18n="m2_desc">Максимальная жесткость, матовая премиальная фактура, сверхлегкий вес. Прямая альтернатива алюминию.</p>
+            <div class="material-uses">
+              <p data-i18n="m2_uses">Применение: Прочные рамы БПЛА/дронов, нагруженные кронштейны, шестерни.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3: Flexible Polymers (Bottom Center-Offset, Horizontal Flex Card) -->
+        <div class="material-asym-card card-flex">
+          <div class="card-num">03</div>
+          <div class="material-floating-tag flex-tag">SHORE 95A ELASTIC</div>
+          <div class="flex-card-inner">
+            <div class="material-img-container flex-img">
+              <img src="assets/images/Black_TPU_bumper_flexing_elasticity_202608061510.webp" alt="Гибкие и эластичные полимеры" loading="lazy">
+            </div>
+            <div class="material-body flex-body">
+              <div class="material-header">
+                <span class="material-code" data-i18n="m3_code">TPU Polymers</span>
+                <h3 data-i18n="m3_title">Гибкие и эластичные полимеры</h3>
+              </div>
+              <p data-i18n="m3_desc">Гнутся, амортизируют удары, растягиваются и восстанавливают форму (полный аналог резины и силикона).</p>
+              <div class="material-uses">
+                <p data-i18n="m3_uses">Применение: Ручки инструмента, уплотнители, демпферы, бамперы.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Showcase Image Section (Between Engineering Polymers and Strategy Roadmap) -->
+  <section class="materials-roadmap-divider">
+    <div class="container">
+      <div class="image-divider-wrapper">
+        <img src="assets/images/782340a8-2bdf-477c-8232-a2873c772d68.webp" alt="CULTFORM Engineering Polymers and Development Strategy" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- Roadmap Section -->
+  <section class="roadmap-section" id="roadmap">
+    <div class="container">
+      <div class="section-tag" data-i18n="road_tag">Стратегия развития</div>
+
+      <div class="roadmap-timeline">
+        <!-- Phase 1 -->
+        <div class="roadmap-card active">
+          <div class="roadmap-phase-sidebar">
+            <div class="phase-number">01</div>
+            <div class="phase-status-badge" data-i18n="r1_status">Текущий этап</div>
+          </div>
+          <div class="roadmap-phase-content">
+            <h3 class="phase-header-title" data-i18n="r1_phase">Фаза 1: Тест и быстрое B2B-движение (Текущий этап)</h3>
+            <ul class="roadmap-bullets">
+              <li>
+                <span class="bullet-lead" data-i18n="r1_b1_title">Запуск на парке FDM-принтеров (Creality Ender 3 V3):</span>
+                <span data-i18n="r1_b1_desc">Быстрое разворачивание мощностей с минимальным CapEx для мелкосерийного производства и R&D.</span>
+              </li>
+              <li>
+                <span class="bullet-lead" data-i18n="r1_b2_title">Валидация спроса и пилотные B2B-контракты:</span>
+                <span data-i18n="r1_b2_desc">Отработка корпоративных гипотез, изготовление оснастки, корпусов и элементов оборудования для локального бизнеса.</span>
+              </li>
+              <li>
+                <span class="bullet-lead" data-i18n="r1_b3_title">Оцифровка и формирование базы:</span>
+                <span data-i18n="r1_b3_desc">Создание библиотеки AI-моделей и готового каталога проверенных SKU для быстрой продажи по модели White-Label и повторных B2B заказов.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Phase 2 -->
+        <div class="roadmap-card">
+          <div class="roadmap-phase-sidebar">
+            <div class="phase-number">02</div>
+            <div class="phase-status-badge secondary" data-i18n="r2_status">Месяцы 6–18</div>
+          </div>
+          <div class="roadmap-phase-content">
+            <h3 class="phase-header-title" data-i18n="r2_phase">Фаза 2: Промышленный AM-хаб и CapEx-масштабирование (Месяцы 6–18)</h3>
+            <ul class="roadmap-bullets">
+              <li>
+                <span class="bullet-lead" data-i18n="r2_b1_title">Запуск собственного AM-хаба:</span>
+                <span data-i18n="r2_b1_desc">Привлечение раунда / лизинг и запуск промышленных SLS / MJF установок для серийного производства.</span>
+              </li>
+              <li>
+                <span class="bullet-lead" data-i18n="r2_b2_title">Экономика масштаба:</span>
+                <span data-i18n="r2_b2_desc">Снижение себестоимости печати до 40% за счет высокой загрузки промышленных мощностей.</span>
+              </li>
+              <li>
+                <span class="bullet-lead" data-i18n="r2_b3_title">Географический рост:</span>
+                <span data-i18n="r2_b3_desc">Выход на прямые контракты с промышленными предприятиями и заводами Европы и Турции.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Phase 3 -->
+        <div class="roadmap-card">
+          <div class="roadmap-phase-sidebar">
+            <div class="phase-number">03</div>
+            <div class="phase-status-badge secondary" data-i18n="r3_status">Месяцы 18–36</div>
+          </div>
+          <div class="roadmap-phase-content">
+            <h3 class="phase-header-title" data-i18n="r3_phase">Фаза 3: Сеть цифровых фабрик и интеграция (Месяцы 18–36)</h3>
+            <ul class="roadmap-bullets">
+              <li>
+                <span class="bullet-lead" data-i18n="r3_b1_title">Экспансия в регион GCC:</span>
+                <span data-i18n="r3_b1_desc">Выход на рынки ОАЭ и Саудовской Аравии, развертывание локальных микро-фабрик.</span>
+              </li>
+              <li>
+                <span class="bullet-lead" data-i18n="r3_b2_title">Платформенная интеграция:</span>
+                <span data-i18n="r3_b2_desc">Включение мощностей в международные RFQ-системы (Xometry, Hubs).</span>
+              </li>
+              <li>
+                <span class="bullet-lead" data-i18n="r3_b3_title">Автономная экосистема:</span>
+                <span data-i18n="r3_b3_desc">Переход на модель «заказчик - нейросеть - микрофабрика» с минимальным участием человека в распределении заказов.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Full-Width Parallax Image Showcase Section -->
+  <section class="fullwidth-image-showcase">
+    <div class="fullwidth-image-frame" id="parallaxImageFrame">
+      <img src="assets/images/Designer_table_lamps_biopolymer_…_202608061425.webp" alt="Designer Biopolymer Lamps by CULTFORM" id="parallaxImage">
+    </div>
+  </section>
+
+  <!-- CTA Banner Section -->
+  <section class="cta-banner">
+    <div class="container">
+      <div class="cta-box">
+        <h2 data-i18n="cta_title">Готовы запустить серию за 96 часов?</h2>
+        <p data-i18n="cta_sub">Отправьте 3D-модель или текстовое описание задачи. Наш AI-инженер рассчитает стоимость и сроки за 15 минут.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- RFQ Contact Modal Overlay -->
+  <div class="modal-overlay" id="rfqModal">
+    <div class="modal-card">
+      <button class="modal-close" id="closeModalBtn">✕</button>
+      <div class="modal-header">
+        <h3 data-i18n="modal_title">Запрос расчета проекта</h3>
+        <p data-i18n="modal_sub">Заполните форму и наши инженеры свяжутся с вами в течение 15 минут.</p>
+      </div>
+
+      <form class="form-grid" id="rfqForm">
+        <div class="form-group">
+          <label data-i18n="lbl_name">Ваше имя / Компания</label>
+          <input type="text" required placeholder="Алексей / TechDevice LLC" data-i18n-ph="ph_name">
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label data-i18n="lbl_contact">Email или Телефон / WhatsApp</label>
+            <input type="text" required placeholder="contact@company.com" data-i18n-ph="ph_contact">
+          </div>
+          <div class="form-group">
+            <label data-i18n="lbl_qty">Планируемый тираж (шт)</label>
+            <input type="number" min="10" max="10000" value="50">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label data-i18n="lbl_cat">Категория изделия</label>
+          <select>
+            <option data-i18n="opt_cat1">Contract Manufacturing (Корпуса IoT/Приборов)</option>
+            <option data-i18n="opt_cat2">White-Label / СТМ (Аксессуары/Органайзеры)</option>
+            <option data-i18n="opt_cat3">Digital Warehouse (Запасные части/Шестерни)</option>
+            <option data-i18n="opt_cat4">Tooling & Jigs (Промышленная оснастка/Кондукторы)</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label data-i18n="lbl_notes">Описание задачи или ссылка на 3D-модель</label>
+          <textarea rows="3" placeholder="Габариты, требования к прочности, условия эксплуатации..." data-i18n-ph="ph_notes"></textarea>
+        </div>
+
+        <div id="formFeedback" style="display: none; font-size: 0.95rem; font-weight: 600; text-align: center;"></div>
+
+        <button type="submit" class="btn btn-terracotta" style="width: 100%; margin-top: 10px;" data-i18n="btn_submit">Отправить заявку</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#" class="logo">
+            <img src="assets/images/logoTransparent.webp" alt="CULTFORM Logo" class="logo-img">
+          </a>
+          <p data-i18n="footer_brand_desc">AI-Driven 3D Production & Micro-Factories Network. On-demand digital manufacturing across EU, GCC, and CIS markets.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4 data-i18n="footer_nav_title">Навигация</h4>
+          <ul class="footer-links">
+            <li><a href="#problem" data-i18n="nav_problem">Проблема</a></li>
+            <li><a href="#solution" data-i18n="nav_solution">Решение</a></li>
+            <li><a href="#process" data-i18n="nav_process">Процесс</a></li>
+            <li><a href="#hubs" data-i18n="nav_hubs">Хабы</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 data-i18n="footer_prod_title">Продукция</h4>
+          <ul class="footer-links">
+            <li><a href="#products" data-i18n="p1_cat">CONTRACT MANUFACTURING</a></li>
+            <li><a href="#products" data-i18n="p2_cat">WHITE-LABEL / CTM</a></li>
+            <li><a href="#products" data-i18n="p3_cat">DIGITAL WAREHOUSE</a></li>
+            <li><a href="#products" data-i18n="p4_cat">TOOLING & JIGS</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 data-i18n="footer_hubs_title">Операционные хабы</h4>
+          <ul class="footer-links">
+            <li><a data-i18n="footer_hub_tr">Стамбул, Турция (EU & GCC)</a></li>
+            <li><a data-i18n="footer_hub_ru">Москва, Россия (CIS)</a></li>
+            <li><a>support@cultform.io</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div data-i18n="footer_copy">© 2026 CULTFORM Inc. All rights reserved.</div>
+        <div data-i18n="footer_tagline">Generative AI 3D Contract Manufacturing</div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
