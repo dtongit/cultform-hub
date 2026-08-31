@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CULTFORM — Инвестиции в распределенные 3D-микрофабрики</title>
+  <meta name="description" content="Инвестируйте в реальные производственные мощности 3D-печати. Доходность от 39.6% до 52.8% годовых с ежемесячными выплатами.">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+
+  <header class="master-pure-header">
+    <div class="pure-header-inner">
+      
+      <!-- Чистый 3D-знак -->
+      <a href="#hero" class="pure-logo-link">
+        <img src="assets/images/photo_2026-08-31 14.23.02-Photoroom.png" alt="CULTFORM" class="pure-logo-img">
+      </a>
+
+      <!-- Открытые ссылки без белой колбасы -->
+      <nav class="pure-nav-links">
+        <a href="#calculator" class="pnl-item">калькулятор дохода</a>
+        <a href="#products-overview" class="pnl-item">спектр продукции</a>
+        <a href="#hubs" class="pnl-item">логистика & хабы</a>
+        <a href="#guarantees" class="pnl-item">гарантии и контроль</a>
+      </nav>
+
+      <!-- Правые контролы -->
+      <div class="pure-actions-right">
+        <div class="pure-lang-switch">
+          <button type="button" class="pls-btn lang-btn active" data-lang="ru">RU</button>
+          <button type="button" class="pls-btn lang-btn" data-lang="tr">TR</button>
+        </div>
+
+        <button type="button" class="btn btn-pure-cta" onclick="openInvestModal(1000)">
+          Начать зарабатывать
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Master Hero Stage (Полностью без фонового контурного логотипа) -->
+  <section class="hero-fullscreen-master" id="hero">
+    
+    <!-- Фоновый архитектурный рендер -->
+    <div class="hero-bg-cover-layer"></div>
+    
+    <!-- Мягкий светофильтр под текст -->
+    <div class="hero-left-vignette-layer"></div>
+
+    <!-- Контентная зона -->
+    <div class="container hero-content-layer">
+      <div class="hero-text-wrapper">
+
+        <h1 class="hero-title-cinematic">
+          Индустриальный рантье: <br>
+          <span class="text-terracotta-gradient">до 88% годовых</span> <br>
+          на аренде оборудования
+        </h1>
+
+        <p class="hero-desc-cinematic">
+          Покупаете модули 3D-производства в собственность от <strong>$1 000</strong> и передаете их в управление сети CULTFORM. Мы обеспечиваем загрузку заказами, сырье и сервис, а вы получаете ежемесячные выплаты с действующего цеха со 2-го месяца.
+        </p>
+
+        <div class="hero-actions-row">
+          <a href="#how" class="btn btn-terracotta-hero">
+            Узнать подробнее
+          </a>
+          <a href="#calculator" class="btn btn-glass-hero">
+            Рассчитать доходность
+          </a>
+        </div>
+
+      </div>
+    </div>
+
+  </section>
+
+  <!-- Interactive Gradient Investor Cockpit with Bionic Wave Bridges -->
+  <section class="calculator-section terracotta-bionic-section" id="calculator">
+
+    <!-- Canvas для парящих зеленых долларов -->
+    <canvas id="moneyCanvas" class="fullscreen-money-canvas"></canvas>
+
+    <div class="container relative-z">
+      
+      <!-- Mega Header with Highlighted Metrics -->
+      <div class="calc-mega-header text-white">
+        <div class="section-tag-pill-dark" data-i18n="calc_tag_pill">Интерактивный расчет прибыли</div>
+        <h2 class="calc-giant-title">
+          <span data-i18n="calc_mega_t1">Вкладывайте от</span> <span class="glow-digit-white" data-i18n="calc_mega_val1">$1 000</span> <span data-i18n="calc_mega_t2">и получайте</span> <span class="glow-digit-green" data-i18n="calc_mega_val2">6–8%</span> <span data-i18n="calc_mega_t3">ежемесячно</span>
+        </h2>
+        <p class="calc-sub-hint text-muted-glow" data-i18n="calc_sub_hint">
+          Двигайте ползунок со значком $, чтобы рассчитать доходность и увидеть работу сложного процента
+        </p>
+      </div>
+
+      <!-- Cockpit Glass Layout -->
+      <div class="calc-cockpit-grid-clean">
+        
+        <!-- Left Controls (Dark Glass) -->
+        <div class="cockpit-col-controls">
+          <div class="cockpit-input-glass-group">
+            <div class="cockpit-label-row">
+              <span class="cockpit-label-white" data-i18n="calc_lbl_sum">Сумма инвестиций:</span>
+              <div class="cockpit-val-wrap">
+                <span class="cockpit-val-green" id="sliderValueText">$1 000</span>
+                <span class="cockpit-val-sub-white" id="slotsCountText">(1 модуль)</span>
+              </div>
+            </div>
+
+            <div class="range-container compact-range">
+              <input type="range" min="1000" max="30000" step="1000" value="1000" id="capitalSlider" class="custom-dollar-range-glow" oninput="handleCapitalChange(this.value)">
+            </div>
+
+            <div class="slider-presets-strip">
+              <button type="button" class="preset-pill-dark active" onclick="setFixedCapital(1000, this)">$1 000</button>
+              <button type="button" class="preset-pill-dark" onclick="setFixedCapital(5000, this)">$5 000</button>
+              <button type="button" class="preset-pill-dark" onclick="setFixedCapital(10000, this)">$10 000</button>
+              <button type="button" class="preset-pill-dark" onclick="setFixedCapital(20000, this)">$20 000</button>
+              <button type="button" class="preset-pill-dark" onclick="setFixedCapital(30000, this)">$30 000</button>
+            </div>
+          </div>
+
+          <div class="cockpit-sub-controls">
+            <div class="sub-glass-box">
+              <span class="sub-label-white"><span data-i18n="calc_lbl_term">Срок:</span> <strong id="termYearsLabel" class="text-glow-green">3 года</strong></span>
+              <div class="term-micro-pills">
+                <button type="button" class="term-btn-dark" onclick="setContractTerm(1, this)">1г</button>
+                <button type="button" class="term-btn-dark active" onclick="setContractTerm(3, this)">3г</button>
+                <button type="button" class="term-btn-dark" onclick="setContractTerm(5, this)">5л</button>
+              </div>
+            </div>
+
+            <div class="sub-glass-box reinvest-compact-box">
+              <div>
+                <span class="sub-label-white" data-i18n="calc_lbl_compound">Сложный %</span>
+                <span class="sub-caption-white" data-i18n="calc_lbl_reinvest">Реинвест</span>
+              </div>
+              <label class="switch-toggle-light">
+                <input type="checkbox" id="reinvestSwitch" onchange="runCalculation()">
+                <span class="switch-slider-light"></span>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Screen -->
+        <div class="cockpit-col-screen-deep" id="cockpitScreen">
+          <div class="screen-top-info">
+            <span class="screen-badge" id="reinvestBadge">Прямые выплаты + возврат актива</span>
+            <span class="screen-term-text"><span data-i18n="calc_grand_lbl">Итого на руках через</span> <span id="grandYearsCount">3 года</span>:</span>
+          </div>
+
+          <div class="screen-grand-number-glow" id="grandTotalDisplay">$3 160</div>
+
+          <div class="screen-mini-metrics-dark">
+            <div class="mini-metric-item">
+              <span class="mini-lbl-muted" data-i18n="calc_metric_month">В месяц:</span>
+              <span class="mini-val-glow text-terracotta-bright" id="payoutMonthVal">$60</span>
+            </div>
+            <div class="mini-metric-item">
+              <span class="mini-lbl-muted" data-i18n="calc_metric_year">За 12 мес:</span>
+              <span class="mini-val-glow" id="payoutYearVal">$720</span>
+            </div>
+            <div class="mini-metric-item">
+              <span class="mini-lbl-muted" data-i18n="calc_metric_apr">Доходность:</span>
+              <span class="mini-val-glow text-green-bright" id="aprVal">72% APR</span>
+            </div>
+          </div>
+
+          <button type="button" class="btn btn-terracotta-solid btn-compact-cta" onclick="openInvestModal(document.getElementById('capitalSlider').value)" data-i18n="calc_btn_book">
+            Начать зарабатывать
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Нижний бионический мост (переход в 3 блок) -->
+    <div class="bionic-bottom-curve">
+      <svg viewBox="0 0 1440 140" fill="none" preserveAspectRatio="none">
+        <path d="M0,0 C320,110 680,20 1040,85 C1240,120 1360,50 1440,0 L1440,140 L0,140 Z" fill="#ffffff"></path>
+      </svg>
+    </div>
+
+  </section>
+
+  <!-- Master Steps Section with Fullwidth Logo Stage -->
+  <section class="how-steps-stage" id="how">
+    
+    <div class="container how-content-container">
+      <div class="how-header-clean text-center">
+        <span class="section-tag-editorial">модель сотрудничества</span>
+        <h2 class="how-clean-title">Простой путь к доходу рантье</h2>
+      </div>
+
+      <div class="how-four-columns-grid">
+        
+        <div class="how-col-step" data-step="1">
+          <div class="hcs-num-tag">01</div>
+          <h3 class="hcs-title">Фиксация оборудования</h3>
+          <p class="hcs-desc">
+            Вносите $1 000. За вами закрепляется серийный номер конкретного модуля Creality Ender 3 V3 и резерв полимеров.
+          </p>
+          <span class="hcs-pill">100% залог в активе</span>
+        </div>
+
+        <div class="how-col-step" data-step="2">
+          <div class="hcs-num-tag">02</div>
+          <h3 class="hcs-title">Загрузка контрактами</h3>
+          <p class="hcs-desc">
+            CULTFORM направляет на ваш модуль пул оптовых заказов: B2B-партии, детали приборов и маркетплейсы.
+          </p>
+          <span class="hcs-pill">Без поиска клиентов</span>
+        </div>
+
+        <div class="how-col-step" data-step="3">
+          <div class="hcs-num-tag">03</div>
+          <h3 class="hcs-title">Автономное производство</h3>
+          <p class="hcs-desc">
+            Станок безостановочно печатает тиражи в хабе (Турция / РФ). Команда хаба фасует и отгружает продукцию.
+          </p>
+          <span class="hcs-pill">Маржа партий до 70%</span>
+        </div>
+
+        <div class="how-col-step step-featured-green" data-step="4">
+          <div class="hcs-num-tag tag-green-num">04</div>
+          <h3 class="hcs-title title-green">Выплата чистой прибыли</h3>
+          <p class="hcs-desc">
+            Ежемесячно со 2-го месяца доход перечисляется на карту или счет в рублях, долларах или USDT.
+          </p>
+          <span class="hcs-pill pill-prominent-green">Доходность со 2-го месяца</span>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="how-fullwidth-logo-stage" id="howLogoStage">
+      <div class="how-logo-double-layer">
+        <img src="assets/images/photo_2026-08-31 14.23.02-Photoroom.png" alt="CULTFORM Outline" class="logo-layer-base">
+        <img src="assets/images/photo_2026-08-31 14.23.02-Photoroom.png" alt="CULTFORM Fill" class="logo-layer-fill">
+      </div>
+    </div>
+
+  </section>
+
+
+  <!-- Master Floating Niches Stage -->
+  <section class="products-floating-stage" id="products-overview">
+    <div class="container">
+      
+      <!-- Clean 3-Line Heading -->
+      <div class="pfs-head-center text-center">
+        <span class="section-tag-editorial">спектр применения</span>
+        <h2 class="pfs-title-three-lines">
+          <span class="pfs-line">3D-печать закрывает десятки ниш:</span> <br>
+          <span class="pfs-line text-terracotta-gradient">от быстрой замены деталей</span> <br>
+          <span class="pfs-line">до авторского декора</span>
+        </h2>
+        <p class="pfs-sub-lead">
+          Микрофабрики CULTFORM оперативно производят партии под ключ для коммерческих клиентов, промышленных производств и ритейла.
+        </p>
+      </div>
+
+      <!-- Centerpiece Image with Floating Orbiting Chips -->
+      <div class="pfs-orbit-stage">
+        
+        <!-- Central Showcase Image -->
+        <div class="pfs-center-media">
+          <img src="assets/images/products-showcase-flatlay.jpg" alt="Спектр продукции CULTFORM" class="pfs-core-img">
+          <div class="pfs-center-badge">
+            <span class="pcb-dot"></span>
+            <span>серии от 10 единиц • отгрузка за 24-48 часов</span>
+          </div>
+        </div>
+
+        <!-- Floating Chips Orbit Layer -->
+        <div class="pfs-floating-chips-group">
+          <!-- Left Wing -->
+          <div class="pfs-chip chip-pos-1">
+            <span class="chip-dot"></span>
+            <span>параметрические вазы</span>
+          </div>
+          <div class="pfs-chip chip-accent chip-pos-2">
+            <span class="chip-dot dot-orange"></span>
+            <span>шестерни и редукторы</span>
+          </div>
+          <div class="pfs-chip chip-pos-3">
+            <span class="chip-dot"></span>
+            <span>корпуса датчиков IP67</span>
+          </div>
+          <div class="pfs-chip chip-accent chip-pos-4">
+            <span class="chip-dot dot-green"></span>
+            <span>дизайнерский свет</span>
+          </div>
+          <div class="pfs-chip chip-pos-5">
+            <span class="chip-dot"></span>
+            <span>рамы дронов и БПЛА</span>
+          </div>
+          <div class="pfs-chip chip-pos-6">
+            <span class="chip-dot"></span>
+            <span>монтажные кондукторы</span>
+          </div>
+
+          <!-- Right Wing -->
+          <div class="pfs-chip chip-accent chip-pos-7">
+            <span class="chip-dot dot-orange"></span>
+            <span>автомобильные кронштейны</span>
+          </div>
+          <div class="pfs-chip chip-pos-8">
+            <span class="chip-dot"></span>
+            <span>настольные органайзеры</span>
+          </div>
+          <div class="pfs-chip chip-pos-9">
+            <span class="chip-dot"></span>
+            <span>клипсы и фиксаторы</span>
+          </div>
+          <div class="pfs-chip chip-accent chip-pos-10">
+            <span class="chip-dot dot-green"></span>
+            <span>захваты манипуляторов</span>
+          </div>
+          <div class="pfs-chip chip-pos-11">
+            <span class="chip-dot"></span>
+            <span>архитектурные макеты</span>
+          </div>
+          <div class="pfs-chip chip-pos-12">
+            <span class="chip-dot"></span>
+            <span>премиальный VIP-мерч</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Fullscreen Minimalist Infrastructure & Hubs Stage -->
+  <section class="hubs-fullscreen-stage" id="hubs">
+    
+    <div class="container hubs-fs-head-container">
+      <div class="hubs-fs-header text-center">
+        <span class="section-tag-editorial">Инфраструктура и логистика</span>
+        <h2 class="hubs-fs-title">Два действующих производственных хаба</h2>
+        <p class="hubs-fs-sub">
+          Собственные мощности полного цикла в двух стратегических локациях: экспорт в страны Европы и Ближнего Востока плюс закрытие внутреннего спроса.
+        </p>
+      </div>
+    </div>
+
+    <div class="hubs-fs-viewport">
+      
+      <!-- Чистая фоновая 3D-карта с уже готовым маршрутом -->
+      <img src="assets/images/map-minimal-hubs.webp" alt="Карта хабов CULTFORM" class="hubs-fs-img">
+
+      <!-- Карточка Хаба Анталья (привязана к нижней светящейся точке) -->
+      <div class="precision-hub-card-only hub-pos-antalya">
+        <div class="phn-glass-card">
+          <div class="phn-status-row">
+            <span class="phn-indicator"></span>
+            <h4>Хаб Анталья • Турция</h4>
+          </div>
+          <p>Экспорт в ЕС • Поставки на маркетплейсы Trendyol / Amazon</p>
+        </div>
+      </div>
+
+      <!-- Карточка Хаба Ростов (привязана к верхней светящейся точке) -->
+      <div class="precision-hub-card-only hub-pos-rostov">
+        <div class="phn-glass-card">
+          <div class="phn-status-row">
+            <span class="phn-indicator"></span>
+            <h4>Хаб Ростов • Россия</h4>
+          </div>
+          <p>Внутренний рынок • B2B-контракты</p>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- Master Clean Light Guarantees Stage -->
+  <section class="guarantees-light-stage" id="guarantees">
+    <div class="container guarantees-content-wrap">
+      
+      <div class="guarantees-editorial-head text-center">
+        <div class="sec-badge-light">
+          <span class="sec-badge-dot"></span>
+          <span>безопасность капитала</span>
+        </div>
+        <h2 class="guarantees-title-hero">Твердые гарантии и контроль</h2>
+        <p class="guarantees-sub-hero">
+          Инвестиции обеспечены физическим производственным активом и прямым юридическим договором.
+        </p>
+      </div>
+
+      <!-- Clean 2x2 Slate Grid -->
+      <div class="guarantees-clean-grid">
+        
+        <!-- Card 01: Legal Ownership -->
+        <div class="sec-light-card">
+          <div class="slc-icon-wrap">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#c94625" stroke-width="2.2">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            </svg>
+          </div>
+          <h3 class="slc-title">Оборудование в вашей собственности</h3>
+          <p class="slc-desc">
+            Вы приобретаете реальный производственный модуль. Оборудование оформляется на вас по официальному договору аренды.
+          </p>
+          <div class="slc-footer">
+            <span class="slc-dot"></span>
+            <span>юридический договор владения</span>
+          </div>
+        </div>
+
+        <!-- Card 02: Full Maintenance -->
+        <div class="sec-light-card">
+          <div class="slc-icon-wrap">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#c94625" stroke-width="2.2">
+              <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+            </svg>
+          </div>
+          <h3 class="slc-title">Обслуживание и сервис под ключ</h3>
+          <p class="slc-desc">
+            Команда хаба полностью отвечает за калибровку, замену сопел, закупку сырья и бесперебойную работу вашего станка.
+          </p>
+          <div class="slc-footer">
+            <span class="slc-dot"></span>
+            <span>сервис за счет управляющей сети</span>
+          </div>
+        </div>
+
+        <!-- Card 03: Monthly Payouts -->
+        <div class="sec-light-card card-accent-green">
+          <div class="slc-icon-wrap icon-green">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2.2">
+              <line x1="12" y1="1" x2="12" y2="23"/>
+              <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+            </svg>
+          </div>
+          <h3 class="slc-title">Ежемесячные выплаты и отчеты</h3>
+          <p class="slc-desc">
+            Доход перечисляется со 2-го месяца на банковский счет, карту или USDT с предоставлением детального отчета по отгрузкам.
+          </p>
+          <div class="slc-footer tag-green">
+            <span class="slc-dot dot-green"></span>
+            <span>стабильный пассивный доход</span>
+          </div>
+        </div>
+
+        <!-- Card 04: Buyback Option -->
+        <div class="sec-light-card">
+          <div class="slc-icon-wrap">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#c94625" stroke-width="2.2">
+              <rect x="2" y="6" width="20" height="12" rx="2"/>
+              <circle cx="16" cy="12" r="2"/>
+              <path d="M6 6V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v2"/>
+            </svg>
+          </div>
+          <h3 class="slc-title">Гарантированный обратный выкуп</h3>
+          <p class="slc-desc">
+            Фиксированные условия выхода: обратный выкуп модуля управляющей компанией по остаточной стоимости или доставка оборудования вам.
+          </p>
+          <div class="slc-footer">
+            <span class="slc-dot"></span>
+            <span>прозрачный выход из проекта</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Clean Minimal Laser Manifest Stage -->
+  <section class="laser-manifest-stage" id="manifesto">
+    <div class="container">
+      
+      <div class="clean-manifest-box text-center" id="laserTriggerWrap">
+        
+        <!-- Лазерный луч и горящая микро-искра -->
+        <div class="laser-scanner-line">
+          <span class="laser-spark-point"></span>
+        </div>
+
+        <p class="manifest-pure-text">
+          Нейросети создают форму, сеть 3D-ферм печатает тираж: <br>
+          <span class="manifest-brand">CULTFORM</span> превращает AI-модель в физический объект за 24 часа.
+        </p>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Master Partnership Podium Stage -->
+  <section class="partnership-podium-stage" id="cta-invest">
+    <div class="container">
+      
+      <div class="partnership-podium-card">
+        
+        <div class="ppc-header text-center">
+          <span class="section-tag-editorial">партнерство и доход</span>
+          <h2 class="ppc-title">
+            Инвестируйте в реальное 3D-производство: <br>
+            <span class="text-terracotta-gradient">получайте до 88% годовых на аренде</span>
+          </h2>
+          <p class="ppc-sub">
+            Покупаете станок в собственность от $1 000, передаете его в управление нашему цеху и получаете ежемесячные выплаты со 2-го месяца.
+          </p>
+        </div>
+
+        <form class="ppc-action-form" onsubmit="event.preventDefault(); submitDirectLead(this);">
+          <div class="paf-input-wrapper">
+            <input type="text" class="paf-input" placeholder="Ваше имя" required>
+          </div>
+          
+          <div class="paf-input-wrapper">
+            <input type="tel" class="paf-input" placeholder="Телефон или Telegram" required>
+          </div>
+
+          <button type="submit" class="btn btn-terracotta-submit">
+            Получить расчет и договор
+          </button>
+        </form>
+
+        <div class="ppc-micro-facts text-center">
+          <span>● Порог входа от $1 000</span>
+          <span>● Выплаты в USD, USDT или RUB</span>
+          <span>● Гарантия обратного выкупа</span>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Investor Application Modal -->
+  <div class="modal-overlay" id="investModal">
+    <div class="modal-card">
+      <button class="modal-close" onclick="closeInvestModal()">✕</button>
+      <div class="modal-header">
+        <h3 data-i18n="modal_title">Бронирование инвест-слота</h3>
+        <p data-i18n="modal_sub">Заполните форму, и мы пришлем инвестиционный договор и финансовую модель фермы.</p>
+      </div>
+
+      <form class="form-grid" id="investForm" onsubmit="handleInvestSubmit(event)">
+        <div class="form-group">
+          <label data-i18n="lbl_name">Ваше имя</label>
+          <input type="text" id="invName" required placeholder="Константин" data-i18n-ph="ph_name">
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label data-i18n="lbl_contact">Телефон / WhatsApp / Telegram</label>
+            <input type="text" id="invContact" required placeholder="+7 (999) 000-00-00" data-i18n-ph="ph_contact">
+          </div>
+          <div class="form-group">
+            <label data-i18n="lbl_amount">Сумма инвестиций ($)</label>
+            <select id="invAmountSelect">
+              <option value="1000" selected data-i18n="opt_1000">$1 000 (1 модуль / доход до $80/мес)</option>
+              <option value="3000" data-i18n="opt_3000">$3 000 (3 модуля / доход до $240/мес)</option>
+              <option value="5000" data-i18n="opt_5000">$5 000 (5 модулей / доход до $400/мес)</option>
+              <option value="10000" data-i18n="opt_10000">$10 000 (10 модулей / доход до $800/мес)</option>
+              <option value="20000" data-i18n="opt_20000">$20 000 (20 модулей / доход до $1 600/мес)</option>
+              <option value="30000" data-i18n="opt_30000">$30 000 (30 модулей / доход до $2 400/мес)</option>
+            </select>
+          </div>
+        </div>
+
+        <div id="formFeedback" style="display: none; font-size: 0.95rem; font-weight: 600; text-align: center; margin-top: 10px;"></div>
+
+        <button type="submit" class="btn btn-terracotta" style="width: 100%; margin-top: 15px;" data-i18n="btn_submit">Получить договор и забронировать</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#" class="logo">
+            <img src="assets/images/logoTransparent.webp" alt="CULTFORM Logo" class="logo-img">
+          </a>
+          <p data-i18n="footer_brand_desc">AI-Driven 3D Production & Micro-Factories Network. Инвестиции в распределенные производственные мощности нового поколения.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4 data-i18n="footer_nav_title">Навигация</h4>
+          <ul class="footer-links">
+            <li><a href="#how" data-i18n="nav_model">Бизнес-модель</a></li>
+            <li><a href="#calculator" data-i18n="nav_calculator">Калькулятор дохода</a></li>
+            <li><a href="#products-overview" data-i18n="nav_products">Продукция</a></li>
+            <li><a href="#hubs" data-i18n="nav_hubs">Хабы & Логистика</a></li>
+            <li><a href="#guarantees">Гарантии и контроль</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 data-i18n="footer_contacts_title">Контакты для инвесторов</h4>
+          <ul class="footer-links">
+            <li><a href="mailto:invest@cultform.online">invest@cultform.online</a></li>
+            <li><a data-i18n="footer_hub_tr">Стамбул / Анталья, Турция</a></li>
+            <li><a data-i18n="footer_hub_ru">Ростов-на-Дону / Москва, Россия</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div data-i18n="footer_copy">© 2026 CULTFORM Inc. All rights reserved.</div>
+        <div data-i18n="footer_tagline">P2P Manufacturing Investment Platform</div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
